@@ -13,4 +13,14 @@ a {
   &:active {
     color: darken($primary, 15%);
   }
+
+
+  &.no-color-link {
+    color: $secondary;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $secondary;
+    } 
+  }
 }

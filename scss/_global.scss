@@ -72,12 +72,14 @@ p.lead {
 
 .dev-icons {
   font-size: 3rem;
-  .list-inline-item i {
-    &:hover {
-      color: $primary;
+  .list-inline-item {
+    i {
+      &:hover {
+        color: $primary;
+      }
     }
-  }
-  .subtitle {
-    font-size: 0.8rem;
+    .subtitle {
+      font-size: 0.8rem;
+    }
   }
 }

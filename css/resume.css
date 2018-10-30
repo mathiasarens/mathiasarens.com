@@ -83,7 +83,7 @@ p.lead {
   color: #BD5D38;
 }
 
-.dev-icons .subtitle {
+.dev-icons .list-inline-item .subtitle {
   font-size: 0.8rem;
 }
 
@@ -193,4 +193,12 @@ a {
 
 a:hover, a:focus, a:active {
   color: #824027;
+}
+
+a.no-color-link {
+  color: #868e96;
+}
+
+a.no-color-link:hover, a.no-color-link:focus, a.no-color-link:active {
+  color: #868e96;
 }

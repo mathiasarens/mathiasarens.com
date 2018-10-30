@@ -38,7 +38,7 @@ gulp.task('vendor', function() {
     gulp.src([
       './node_modules/font-mfizz/**/*',
     ])
-    .pipe(gulp.dest('./vendor'))
+    .pipe(gulp.dest('./vendor/font-mfizz'))
 
 
   // jQuery
@@ -53,7 +53,7 @@ gulp.task('vendor', function() {
       './node_modules/jquery.easing/*.js'
     ])
     .pipe(gulp.dest('./vendor/jquery-easing'))
-
+    
 });
 
 // Compile SCSS
