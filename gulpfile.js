@@ -34,6 +34,13 @@ gulp.task('vendor', function() {
     ])
     .pipe(gulp.dest('./vendor'))
 
+    // Font mfizz
+    gulp.src([
+      './node_modules/font-mfizz/**/*',
+    ])
+    .pipe(gulp.dest('./vendor'))
+
+
   // jQuery
   gulp.src([
       './node_modules/jquery/dist/*',
