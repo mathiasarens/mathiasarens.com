@@ -7,6 +7,7 @@ var uglify = require('gulp-uglify');
 var autoprefixer = require('gulp-autoprefixer');
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
+var ftp = require( 'vinyl-ftp' );
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -53,7 +54,7 @@ gulp.task('vendor', function() {
       './node_modules/jquery.easing/*.js'
     ])
     .pipe(gulp.dest('./vendor/jquery-easing'))
-    
+
 });
 
 // Compile SCSS
@@ -127,3 +128,41 @@ gulp.task('dev', ['css', 'js', 'browserSync'], function() {
   gulp.watch('./js/*.js', ['js']);
   gulp.watch('./*.html', browserSync.reload);
 });
+ 
+gulp.task('deploy', function () {
+    
+
+    var conn = ftp.create( {
+        host:     process.env.MATHIASARENS_COM_HOST,
+        user:     process.env.MATHIASARENS_COM_USER,
+        password: process.env.MATHIASARENS_COM_PW,
+        parallel: 10
+    } );
+ 
+    var globs = [
+        'src/**',
+        'css/**',
+        'js/**',
+        'img/**',
+        'fonts/**',
+        'vendor/bootstrap/css/bootstrap.min.css',
+        'vendor/bootstrap/css/bootstrap.min.css.map',
+        'vendor/fontawesome-free/css/all.min.css',
+        'vendor/fontawesome-free/webfonts/*',
+        'vendor/font-mfizz/dist/*',
+        'vendor/jquery/jquery.min.js',
+        'vendor/jquery-easing/jquery.easing.min.js',
+        'vendor/bootstrap/js/bootstrap.bundle.min.js',
+        'vendor/bootstrap/js/bootstrap.bundle.min.js.map',
+        'vendor/jquery-easing/jquery.easing.min.js',
+        'index.html'
+    ];
+ 
+    // using base = '.' will transfer everything to /public_html correctly
+    // turn off buffering in gulp.src for best performance
+ 
+    return gulp.src( globs, { base: '.', buffer: false } )
+        .pipe( conn.newer( '/' ) ) // only upload newer files
+        .pipe( conn.dest( '/' ) );
+ 
+} );
