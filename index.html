@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 
 <head>
 
@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Resume / CV of Mathias Arens">
   <meta name="author" content="Mathias Arens">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mathias Arens - Senior Java Developer" />
+  <meta property="og:description" content="Resume / CV of Mathias Arens" />
+  <meta property="og:url" content="http://www.mathiasarens.com" />
+  <meta property="og:image" content="http://www.mathiasarens.com/img/profile_preview.jpg" />
 
   <title>Mathias Arens - Senior Java Developer</title>
 
@@ -142,8 +148,8 @@
               <li>Created a new micro service written in Scala to store user sessions. Cookies contained more session
                 information secured by JSON web tokens</li>
               <li>Prepared and implemented A/B testings</li>
-              <li>Co-developed <a href="https://api.otto.de" target="_blank">api.otto.de</a>. An OAuth2 based REST API
-                to connect external partners to otto.de</li>
+              <li>Co-developed <a href="https://api.otto.de" target="_blank">api.otto.de</a>. An REST API
+                to connect external partners to otto.de. It is secured by OAuth2 and implements the HATEOAS+HAL specification.</li>
               <li>Set up of CloudFormation, Bash Scripts and AutoStacker24 to generate AWS infrastructure on new
                 accounts including IAM roles, VPCs, Route53 setup.</li>
               <li>Migrated microservices from marathon/mesos to AWS keeping 99.9% uptime.</li>
