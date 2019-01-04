@@ -145,6 +145,7 @@ gulp.task('deploy', function () {
         'js/**',
         'img/**',
         'fonts/**',
+        'pdf/**',
         'vendor/bootstrap/css/bootstrap.min.css',
         'vendor/bootstrap/css/bootstrap.min.css.map',
         'vendor/fontawesome-free/css/all.min.css',
