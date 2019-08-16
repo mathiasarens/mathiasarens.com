@@ -1,8 +1,11 @@
 {
-    "title": "Resume",
-    "name": "startbootstrap-resume",
-    "version": "5.0.2",
+    "title": "Resume for Mathias Arens",
+    "name": "mathiasarens.com",
+    "version": "5.0.7",
     "description": "Resume is a simple, yet elegant resume and CV theme for Bootstrap 4.",
+    "scripts": {
+        "start": "node_modules/.bin/gulp watch"
+    },
     "keywords": [
         "css",
         "sass",
@@ -11,7 +14,7 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/resume",
+    "homepage": "http://mathiasarens.com",
     "bugs": {
         "url": "https://github.com/BlackrockDigital/startbootstrap-resume/issues",
         "email": "feedback@startbootstrap.com"
@@ -25,23 +28,31 @@
         "type": "git",
         "url": "https://github.com/BlackrockDigital/startbootstrap-resume.git"
     },
+    "browserslist": [
+        ">1%"
+      ],
     "dependencies": {
-        "@fortawesome/fontawesome-free": "5.4.2",
+        "@fortawesome/fontawesome-free": "^5.10.1",
+        "bootstrap": "^4.3.1",
         "font-mfizz": "^2.4.1",
-        "bootstrap": "4.1.3",
-        "popper.js": "^1.14.3",
-        "jquery": "3.3.1",
-        "jquery.easing": "1.4.1"
+        "jquery": "3.4.1",
+        "jquery.easing": "^1.4.1"
     },
     "devDependencies": {
-        "browser-sync": "2.26.3",
-        "gulp": "^3.9.1",
-        "gulp-autoprefixer": "6.0.0",
-        "gulp-clean-css": "3.10.0",
-        "gulp-header": "2.0.5",
+        "browser-sync": "^2.26.7",
+        "del": "4.1.1",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^6.1.0",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-cli": "^2.2.0",
+        "gulp-header": "^2.0.9",
+        "gulp-plumber": "^1.2.1",
         "gulp-rename": "1.4.0",
         "gulp-sass": "4.0.2",
-        "gulp-uglify": "3.0.1",
+        "gulp-uglify": "^3.0.2",
+        "merge-stream": "2.0.0",
+        "lodash": ">=4.17.13",
+        "node-sass": "4.12.0",
         "vinyl-ftp": "0.6.1"
     }
 }
